@@ -19,9 +19,8 @@ describe('hello API',function(){
 	it('POST request is not allowed',function(done){
 		request.post(apiRoot).end(function(err,res){
 				expect(err).to.be.an('error');
-				expect(res.statusCode).to.equal(status.METHOD_NOT_ALLOWED);
+				expect(res.statusCode).to.equal(404);
+				done();
 			});
 		});
 });
-
-
